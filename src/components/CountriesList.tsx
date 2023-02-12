@@ -1,10 +1,8 @@
-import React from "react";
-
-const CountriesList = ({ countriesList }) => {
+const CountriesList = ({ countriesList }: { countriesList: CountriesList }) => {
   return (
     <div>
       <ul className="list-none space-y-4 overflow-y-scroll">
-        {countriesList.map((country: any, index: number) => (
+        {countriesList.map((country, index: number) => (
           <li
             key={index}
             className="text-left flex border-2 p-2 items-center gap-4 rounded"

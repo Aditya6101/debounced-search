@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Searchbar from "./components/Searchbar";
 import CountriesList from "./components/CountriesList";
 import Loader from "./components/Loader";
@@ -7,7 +7,7 @@ const URL = `https://restcountries.com/v3.1/name`;
 
 function App() {
   const [name, setName] = useState("");
-  const [countriesList, setCountris] = useState([]);
+  const [countriesList, setCountris] = useState<CountriesList>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
